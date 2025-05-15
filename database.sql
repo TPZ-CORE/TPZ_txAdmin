@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS `banned_users` (
   `bannedReason` longtext CHARACTER SET utf16 COLLATE utf16_unicode_ci DEFAULT 'N/A',
   `warnings` int(11) DEFAULT 0,
   PRIMARY KEY (`identifier`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- Dumping structure for table tpzcore.billing
 CREATE TABLE IF NOT EXISTS `billing` (
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `billing` (
   `date` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping structure for table tpzcore.characters
 CREATE TABLE IF NOT EXISTS `characters` (
@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS `containers` (
   `data` longtext DEFAULT '[]',
   PRIMARY KEY (`id`),
   UNIQUE KEY `ID` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping structure for table tpzcore.crafting
 CREATE TABLE IF NOT EXISTS `crafting` (
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS `crafting` (
   `experience` int(11) DEFAULT 0,
   `actions` int(11) DEFAULT 0,
   PRIMARY KEY (`job`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- Dumping structure for table tpzcore.items
 CREATE TABLE IF NOT EXISTS `items` (
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   `closeInventory` int(1) DEFAULT 0,
   PRIMARY KEY (`item`),
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping data for table tpzcore.items: ~1,194 rows (approximately)
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
@@ -1316,7 +1316,7 @@ CREATE TABLE IF NOT EXISTS `makeup` (
   `title` varchar(255) DEFAULT NULL,
   `comps` longtext DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- Dumping structure for table tpzcore.outfits
 CREATE TABLE IF NOT EXISTS `outfits` (
@@ -1326,7 +1326,7 @@ CREATE TABLE IF NOT EXISTS `outfits` (
   `title` varchar(255) DEFAULT NULL,
   `comps` longtext DEFAULT NULL,
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 
 -- Dumping structure for table tpzcore.passports
@@ -1345,14 +1345,14 @@ CREATE TABLE IF NOT EXISTS `passports` (
   `expiration_duration` int(11) NOT NULL DEFAULT 0,
   `url` longtext NOT NULL,
   PRIMARY KEY (`identityId`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- Dumping structure for table tpzcore.society
 CREATE TABLE IF NOT EXISTS `society` (
   `job` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `ledger` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`job`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- Dumping data for table tpzcore.society: ~40 rows (approximately)
 /*!40000 ALTER TABLE `society` DISABLE KEYS */;
