@@ -201,6 +201,13 @@ tasks:
     subpath: tpz_society
     dest: ./temp/[TPZ]/tpz_society
 
+  # Download TPZ-CORE Stores
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_stores
+    ref: main
+    subpath: tpz_stores
+    dest: ./temp/[TPZ]/tpz_stores
+
   # Download TPZ-CORE Fishing
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_fishing
