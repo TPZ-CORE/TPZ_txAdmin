@@ -1,31 +1,5 @@
--- Dumping structure for table daisytown.banking
-CREATE TABLE IF NOT EXISTS `banking` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `charidentifier` int(11) NOT NULL,
-  `bank` varchar(50) NOT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `identifier` varchar(50) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `money` int(11) DEFAULT 0,
-  `gold` int(11) DEFAULT 0,
-  PRIMARY KEY (`id`) USING BTREE,
-  KEY `charidentifier` (`charidentifier`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping structure for table daisytown.banking_records
-CREATE TABLE IF NOT EXISTS `banking_records` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `bank` varchar(50) DEFAULT NULL,
-  `identifier` varchar(50) NOT NULL,
-  `charidentifier` int(11) NOT NULL,
-  `reason` longtext DEFAULT NULL,
-  `account` int(1) DEFAULT 0,
-  `cost` int(11) DEFAULT 0,
-  `date` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
-
--- Dumping structure for table daisytown.banned_users
+-- Dumping structure for table tpzcore.banned_users
 CREATE TABLE IF NOT EXISTS `banned_users` (
   `identifier` varchar(50) NOT NULL,
   `steamname` varchar(50) DEFAULT NULL,
@@ -35,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `banned_users` (
   PRIMARY KEY (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping structure for table daisytown.billing
+-- Dumping structure for table tpzcore.billing
 CREATE TABLE IF NOT EXISTS `billing` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `job` int(1) DEFAULT NULL,
@@ -51,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `billing` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping structure for table daisytown.characters
+-- Dumping structure for table tpzcore.characters
 CREATE TABLE IF NOT EXISTS `characters` (
   `charidentifier` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(50) NOT NULL DEFAULT '',
@@ -97,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   KEY `group` (`group`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
--- Dumping structure for table daisytown.containers
+-- Dumping structure for table tpzcore.containers
 CREATE TABLE IF NOT EXISTS `containers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` longtext DEFAULT NULL,
@@ -108,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `containers` (
   UNIQUE KEY `ID` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dumping structure for table daisytown.crafting
+-- Dumping structure for table tpzcore.crafting
 CREATE TABLE IF NOT EXISTS `crafting` (
   `job` varchar(45) NOT NULL,
   `unlocked_recipes` longtext DEFAULT '[]',
@@ -118,28 +92,7 @@ CREATE TABLE IF NOT EXISTS `crafting` (
   PRIMARY KEY (`job`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping structure for table daisytown.horses
-CREATE TABLE IF NOT EXISTS `horses` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `identifier` varchar(40) NOT NULL,
-  `charid` int(11) NOT NULL,
-  `selected` int(11) NOT NULL DEFAULT 0,
-  `model` varchar(50) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `components` varchar(5000) NOT NULL DEFAULT '{}',
-  `exp` int(11) NOT NULL DEFAULT 0,
-  `items` longtext DEFAULT '{}',
-  `sex` int(11) DEFAULT 0,
-  PRIMARY KEY (`id`),
-  KEY `FK_horses_characters` (`charid`),
-  KEY `model` (`model`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Dumping data for table daisytown.horses: ~0 rows (approximately)
-/*!40000 ALTER TABLE `horses` DISABLE KEYS */;
-/*!40000 ALTER TABLE `horses` ENABLE KEYS */;
-
--- Dumping structure for table daisytown.items
+-- Dumping structure for table tpzcore.items
 CREATE TABLE IF NOT EXISTS `items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `item` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
@@ -156,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `items` (
   UNIQUE KEY `id` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
--- Dumping data for table daisytown.items: ~1,194 rows (approximately)
+-- Dumping data for table tpzcore.items: ~1,194 rows (approximately)
 /*!40000 ALTER TABLE `items` DISABLE KEYS */;
 INSERT INTO `items` (`id`, `item`, `label`, `weight`, `remove`, `type`, `description`, `action`, `stackable`, `droppable`, `closeInventory`) VALUES
 	(184, 'Agarita', 'Agarita', 0, 0, 'item', 'nothing', 'none', 1, 1, 0),
@@ -1355,44 +1308,7 @@ INSERT INTO `items` (`id`, `item`, `label`, `weight`, `remove`, `type`, `descrip
 	(1101, 'yogurt', 'Yogurt', 0, 0, 'item', 'nothing', 'none', 1, 1, 0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
 
--- Dumping structure for table daisytown.job_application_requests
-CREATE TABLE IF NOT EXISTS `job_application_requests` (
-  `id` varchar(50) NOT NULL,
-  `charidentifier` int(11) NOT NULL DEFAULT 0,
-  `identifier` varchar(50) DEFAULT NULL,
-  `username` varchar(50) CHARACTER SET utf16 COLLATE utf16_unicode_ci DEFAULT NULL,
-  `job` varchar(50) DEFAULT NULL,
-  `description` longtext CHARACTER SET utf16 COLLATE utf16_unicode_ci NOT NULL,
-  `date` varchar(50) DEFAULT 'N/A',
-  `approved` int(11) DEFAULT 0,
-  `received` int(11) DEFAULT 0,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=DYNAMIC;
-
--- Dumping structure for table daisytown.loadout
-CREATE TABLE IF NOT EXISTS `loadout` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `identifier` varchar(50) NOT NULL,
-  `charidentifier` int(11) DEFAULT NULL,
-  `name` varchar(50) DEFAULT NULL,
-  `ammo` longtext NOT NULL DEFAULT '[]',
-  `components` longtext NOT NULL DEFAULT '[]',
-  `dirtlevel` double DEFAULT 0,
-  `mudlevel` double DEFAULT 0,
-  `conditionlevel` double DEFAULT 0,
-  `rustlevel` double DEFAULT 0,
-  `used` tinyint(4) DEFAULT 0,
-  `used2` tinyint(4) DEFAULT 0,
-  `dropped` int(11) NOT NULL DEFAULT 0,
-  `comps` longtext NOT NULL DEFAULT '[]',
-  `label` varchar(50) DEFAULT NULL,
-  `curr_inv` varchar(100) NOT NULL DEFAULT 'default',
-  PRIMARY KEY (`id`),
-  KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-
--- Dumping structure for table daisytown.makeup
+-- Dumping structure for table tpzcore.makeup
 CREATE TABLE IF NOT EXISTS `makeup` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(45) NOT NULL,
@@ -1402,21 +1318,7 @@ CREATE TABLE IF NOT EXISTS `makeup` (
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping structure for table daisytown.motels
-CREATE TABLE IF NOT EXISTS `motels` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `motel` varchar(255) NOT NULL,
-  `room` int(2) NOT NULL DEFAULT 0,
-  `unique_room_identifier` int(11) DEFAULT 0,
-  `identifier` varchar(40) DEFAULT NULL,
-  `charidentifier` int(11) DEFAULT 0,
-  `container` int(11) DEFAULT 0,
-  `duration` int(11) DEFAULT 0,
-  PRIMARY KEY (`id`),
-  KEY `motel` (`motel`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci ROW_FORMAT=DYNAMIC;
-
--- Dumping structure for table daisytown.outfits
+-- Dumping structure for table tpzcore.outfits
 CREATE TABLE IF NOT EXISTS `outfits` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `identifier` varchar(45) NOT NULL,
@@ -1427,7 +1329,7 @@ CREATE TABLE IF NOT EXISTS `outfits` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
 
--- Dumping structure for table daisytown.passports
+-- Dumping structure for table tpzcore.passports
 CREATE TABLE IF NOT EXISTS `passports` (
   `identityId` varchar(50) NOT NULL DEFAULT '',
   `identifier` varchar(50) NOT NULL,
@@ -1445,14 +1347,14 @@ CREATE TABLE IF NOT EXISTS `passports` (
   PRIMARY KEY (`identityId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping structure for table daisytown.society
+-- Dumping structure for table tpzcore.society
 CREATE TABLE IF NOT EXISTS `society` (
   `job` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   `ledger` int(11) NOT NULL DEFAULT 0,
   PRIMARY KEY (`job`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table daisytown.society: ~40 rows (approximately)
+-- Dumping data for table tpzcore.society: ~40 rows (approximately)
 /*!40000 ALTER TABLE `society` DISABLE KEYS */;
 INSERT INTO `society` (`job`, `ledger`) VALUES
 	('annesburggunsmith', 0),
