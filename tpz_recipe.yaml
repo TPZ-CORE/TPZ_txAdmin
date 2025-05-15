@@ -188,3 +188,18 @@ tasks:
     src: https://github.com/TPZ-CORE/tpz_users_inactivity/tpz_users_inactivity
     ref: main
     dest: ./temp/[TPZ]/tpz_users_inactivity
+
+# Remove Old Chat
+  - action: remove_path
+    path: ./resources/[cfx-default]/[gameplay]/chat
+
+# Move all TPZ-CORE resources and files to root for txadmin
+  - action: move_path
+    src: ./temp/[TPZ]
+    dest: ./resources/[TPZ]
+
+# Clean up temporary files
+  - action: remove_path
+    path: ./temp
+  - action: remove_path
+    path: ./tmp
