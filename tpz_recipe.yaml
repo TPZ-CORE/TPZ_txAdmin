@@ -46,63 +46,63 @@ tasks:
     src: https://github.com/TPZ-CORE/tpz_core
     ref: master
     subpath: tpz_core
-    dest: ./temp/[TPZ]/tpz_core
+    dest: ./temp/[TPZ-ESSENTIALS]/tpz_core
     
 # Download TPZ-CORE Characters
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_characters
     ref: master
     subpath: tpz_characters
-    dest: ./temp/[TPZ]/tpz_characters
+    dest: ./temp/[TPZ-ESSENTIALS]/tpz_characters
 
   # Download TPZ-CORE Inventory
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_inventory
     ref: master
     subpath: tpz_inventory
-    dest: ./temp/[TPZ]/tpz_inventory
+    dest: ./temp/[TPZ-ESSENTIALS]/tpz_inventory
     
   # Download TPZ-CORE Inventory Trade Addon
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_inventory_trade
     ref: master
     subpath: tpz_inventory_trade
-    dest: ./temp/[TPZ]/tpz_inventory_trade
+    dest: ./temp/[TPZ-ESSENTIALS]/tpz_inventory_trade
 
   # Download TPZ-CORE Inputs
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_inputs
     ref: master
     subpath: tpz_inputs
-    dest: ./temp/[TPZ]/tpz_inputs
+    dest: ./temp/[TPZ-UTILITIES]/tpz_inputs
 
   # Download TPZ-CORE Notify
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_notify
     ref: master
     subpath: tpz_notify
-    dest: ./temp/[TPZ]/tpz_notify
+    dest: ./temp/[TPZ-UTILITIES]/tpz_notify
 
   # Download TPZ-CORE Menu Base
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_menu_base
     ref: master
     subpath: tpz_menu_base
-    dest: ./temp/[TPZ]/tpz_menu_base
+    dest: ./temp/[TPZ-UTILITIES]/tpz_menu_base
 
   # Download TPZ-CORE Skillcheck
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_skillcheck
     ref: master
     subpath: tpz_skillcheck
-    dest: ./temp/[TPZ]/tpz_skillcheck
+    dest: ./temp/[TPZ-UTILITIES]/tpz_skillcheck
 
   # Download TPZ-CORE Vehicle Fix
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_vehiclefixes
     ref: master
     subpath: tpz_vehiclefixes
-    dest: ./temp/[TPZ]/tpz_vehiclefixes
+    dest: ./temp/[TPZ-UTILITIES]/tpz_vehiclefixes
 
   # Download TPZ-CORE Discord Whitelist
   - action: download_github
@@ -116,7 +116,7 @@ tasks:
     src: https://github.com/TPZ-CORE/tpz_boilerplate
     ref: master
     subpath: tpz_boilerplate
-    dest: ./temp/[TPZ]/tpz_boilerplate
+    dest: ./temp/[TPZ-UTILITIES]/tpz_boilerplate
 
   # Download TPZ-CORE Teleports
   - action: download_github
@@ -144,7 +144,7 @@ tasks:
     src: https://github.com/TPZ-CORE/tpz_leveling
     ref: master
     subpath: tpz_leveling
-    dest: ./temp/[TPZ]/tpz_leveling
+    dest: ./temp/[TPZ-UTILITIES]/tpz_leveling
 
   # Download TPZ-CORE Metabolism
   - action: download_github
@@ -207,7 +207,7 @@ tasks:
     src: https://github.com/TPZ-CORE/tpz_versions
     ref: master
     subpath: tpz_versions
-    dest: ./temp/[TPZ]/tpz_versions
+    dest: ./temp/[TPZ-UTILITIES]/tpz_versions
 
   # Download TPZ-CORE Users Inactivity
   - action: download_github
