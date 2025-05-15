@@ -40,7 +40,27 @@ tasks:
 # Remove chat path
   - action: remove_path
     path: ./resources/[CFX]/[gameplay]/chat
-    
+
+# Download oxmysql
+  - action: download_file
+    path: ./tmp/files/oxmysql.zip
+    url: https://github.com/overextended/oxmysql/releases/latest/download/oxmysql.zip
+  - action: unzip
+    dest: ./resources/[standalone]
+    src: ./tmp/files/oxmysql.zip
+
+# Download pma-voice
+  - action: download_github
+    src: https://github.com/AvarianKnight/pma-voice
+    ref: main
+    dest: ./resources/[standalone]/pma-voice
+
+# Download weathersync
+  - action: download_github
+    src: https://github.com/kibook/weathersync
+    ref: master
+    dest: ./resources/[standalone]/weathersync
+
 # Download TPZ-CORE CORE
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_core
