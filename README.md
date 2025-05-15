@@ -13,7 +13,7 @@
 
 5. This site should open in your browser. Make sure a PIN is filled, and click Link Account.
 
-https://i.imgur.com/fsTEzv9
+https://i.imgur.com/fsTEzv9.png
 
 
 Copy and paste the below url into the url field. `https://raw.githubusercontent.com/TPZ-CORE/TPZ_txAdmin/main/tpz_recipe.yaml`
