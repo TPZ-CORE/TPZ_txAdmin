@@ -32,7 +32,7 @@ tasks:
 
 # Download default CFX resources
   - action: download_github
-    src: https://github.com/TPZ-CORE/cfx-server-data
+    src: https://github.com/citizenfx/cfx-server-data
     ref: master
     subpath: resources
     dest: ./resources/
