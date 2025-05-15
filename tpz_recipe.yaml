@@ -43,151 +43,151 @@ tasks:
     
 # Download TPZ-CORE CORE
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_core/tpz_core
+    src: https://github.com/TPZ-CORE/tpz_core/tree/main/tpz_core
     ref: main
     dest: ./temp/[TPZ]/tpz_core
     
 # Download TPZ-CORE Characters
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_characters/tpz_characters
+    src: https://github.com/TPZ-CORE/tpz_characters/tree/main/tpz_characters
     ref: main
     dest: ./temp/[TPZ]/tpz_characters
 
   # Download TPZ-CORE Inventory
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_inventory/tpz_inventory
+    src: https://github.com/TPZ-CORE/tpz_inventory/tree/main/tpz_inventory
     ref: main
     dest: ./temp/[TPZ]/tpz_inventory
     
   # Download TPZ-CORE Inventory Trade Addon
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_inventory_trade/tpz_inventory_trade
+    src: https://github.com/TPZ-CORE/tpz_inventory_trade/tree/main/tpz_inventory_trade
     ref: main
     dest: ./temp/[TPZ]/tpz_inventory_trade
 
   # Download TPZ-CORE Inputs
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_inputs/tpz_inputs
+    src: https://github.com/TPZ-CORE/tpz_inputs/tree/main/tpz_inputs
     ref: main
     dest: ./temp/[TPZ]/tpz_inputs
 
   # Download TPZ-CORE Notify
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_notify/tpz_notify
+    src: https://github.com/TPZ-CORE/tpz_notify/tree/main/tpz_notify
     ref: main
     dest: ./temp/[TPZ]/tpz_notify
 
   # Download TPZ-CORE Menu Base
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_menu_base/tpz_menu_base
+    src: https://github.com/TPZ-CORE/tpz_menu_base/tree/main/tpz_menu_base
     ref: main
     dest: ./temp/[TPZ]/tpz_menu_base
 
   # Download TPZ-CORE Skillcheck
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_skillcheck/tpz_skillcheck
+    src: https://github.com/TPZ-CORE/tpz_skillcheck/tree/main/tpz_skillcheck
     ref: main
     dest: ./temp/[TPZ]/tpz_skillcheck
 
   # Download TPZ-CORE Vehicle Fix
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_vehiclefixes/tpz_vehiclefixes
+    src: https://github.com/TPZ-CORE/tpz_vehiclefixes/tree/main/tpz_vehiclefixes
     ref: main
     dest: ./temp/[TPZ]/tpz_vehiclefixes
 
   # Download TPZ-CORE Discord Whitelist
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_discord_whitelist/tpz_discord_whitelist
+    src: https://github.com/TPZ-CORE/tpz_discord_whitelist/tree/main/tpz_discord_whitelist
     ref: main
     dest: ./temp/[TPZ]/tpz_discord_whitelist
 
   # Download TPZ-CORE Boilerplate
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_boilerplate/tpz_boilerplate
+    src: https://github.com/TPZ-CORE/tpz_boilerplate/tree/main/tpz_boilerplate
     ref: main
     dest: ./temp/[TPZ]/tpz_boilerplate
 
   # Download TPZ-CORE Teleports
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_teleports/tpz_teleports
+    src: https://github.com/TPZ-CORE/tpz_teleports/tree/main/tpz_teleports
     ref: main
     dest: ./temp/[TPZ]/tpz_teleports
 
   # Download TPZ-CORE Doorlocks
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_doorlocks/tpz_doorlocks
+    src: https://github.com/TPZ-CORE/tpz_doorlocks/tree/main/tpz_doorlocks
     ref: main
     dest: ./temp/[TPZ]/tpz_doorlocks
 
   # Download TPZ-CORE Object Loader
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_objectloader/tpz_objectloader
+    src: https://github.com/TPZ-CORE/tpz_objectloader/tree/main/tpz_objectloader
     ref: main
     dest: ./temp/[TPZ]/tpz_objectloader
 
   # Download TPZ-CORE Leveling
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_leveling/tpz_leveling
+    src: https://github.com/TPZ-CORE/tpz_leveling/tree/main/tpz_leveling
     ref: main
     dest: ./temp/[TPZ]/tpz_leveling
 
   # Download TPZ-CORE Metabolism
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_metabolism/tpz_metabolism
+    src: https://github.com/TPZ-CORE/tpz_metabolism/tree/main/tpz_metabolism
     ref: main
     dest: ./temp/[TPZ]/tpz_metabolism
 
   # Download TPZ-CORE HUD
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_hud/tpz_hud
+    src: https://github.com/TPZ-CORE/tpz_hud/tree/main/tpz_hud
     ref: main
     dest: ./temp/[TPZ]/tpz_hud
 
   # Download TPZ-CORE Society
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_society/tpz_society
+    src: https://github.com/TPZ-CORE/tpz_society/tree/main/tpz_society
     ref: main
     dest: ./temp/[TPZ]/tpz_society
 
   # Download TPZ-CORE Fishing
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_fishing/tpz_fishing
+    src: https://github.com/TPZ-CORE/tpz_fishing/tree/main/tpz_fishing
     ref: main
     dest: ./temp/[TPZ]/tpz_fishing
 
   # Download TPZ-CORE Guarma
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_guarma/tpz_guarma
+    src: https://github.com/TPZ-CORE/tpz_guarma/tree/main/tpz_guarma
     ref: main
     dest: ./temp/[TPZ]/tpz_guarma
 
   # Download TPZ-CORE Lumberjack
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_lumberjack/tpz_lumberjack
+    src: https://github.com/TPZ-CORE/tpz_lumberjack/tree/main/tpz_lumberjack
     ref: main
     dest: ./temp/[TPZ]/tpz_lumberjack
 
   # Download TPZ-CORE Mining
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_mining/tpz_mining
+    src: https://github.com/TPZ-CORE/tpz_mining/tree/main/tpz_mining
     ref: main
     dest: ./temp/[TPZ]/tpz_mining
     
   # Download TPZ-CORE Gold Panning
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_goldpanning/tpz_goldpanning
+    src: https://github.com/TPZ-CORE/tpz_goldpanning/tree/main/tpz_goldpanning
     ref: main
     dest: ./temp/[TPZ]/tpz_goldpanning
 
   # Download TPZ-CORE Versions
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_versions/tpz_versions
+    src: https://github.com/TPZ-CORE/tpz_versions/tree/main/tpz_versions
     ref: main
     dest: ./temp/[TPZ]/tpz_versions
 
   # Download TPZ-CORE Users Inactivity
   - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_users_inactivity/tpz_users_inactivity
+    src: https://github.com/TPZ-CORE/tpz_users_inactivity/tree/main/tpz_users_inactivity
     ref: main
     dest: ./temp/[TPZ]/tpz_users_inactivity
 
