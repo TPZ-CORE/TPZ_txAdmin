@@ -4,13 +4,9 @@
 ## Windows
 
 1. Create a new base folder (e.g. C:\MyRedMServer)
-
 2. Navigate to http://runtime.fivem.net/artifacts/fivem/build_server_windows/master and download the Latest Recommended artifact.
-
 3. Open the downloaded server.zip file and extract the contents to a new folder called cfx within your server folder created in step 1 (e.g.  C:\MyRedMServer\cfx)
-
 4. Double Click or execute FXServer.exe to initiate setup
-
 5. This site should open in your browser. Make sure a PIN is filled, and click Link Account.
 
 6. Log in to your account on Cfx.re in this tab and then click Yes, Allow.
