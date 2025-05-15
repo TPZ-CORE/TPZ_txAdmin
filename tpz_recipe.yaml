@@ -36,6 +36,8 @@ tasks:
     ref: master
     subpath: resources
     dest: ./resources/
+
+# Remove chat path
   - action: remove_path
     path: ./resources/[CFX]/[gameplay]/chat
     
