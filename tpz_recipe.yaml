@@ -166,6 +166,13 @@ tasks:
     subpath: tpz_leveling
     dest: ./temp/[TPZ]/tpz_leveling
 
+# Download TPZ-CORE Crafting
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_crafting
+    ref: main
+    subpath: tpz_crafting
+    dest: ./temp/[TPZ]/tpz_crafting
+
 # Download TPZ-CORE Loot NPCs
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_lootnpcs
