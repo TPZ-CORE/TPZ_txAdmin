@@ -1,0 +1,64 @@
+$engine: 3
+$onesync: on
+$steamRequired: true
+name: TPZCORE
+author: nosmakos
+description: TPZ-CORE Official txAdmin recipe! This will setup automatically the TPZ-CORE Framework.
+
+variables:
+    steam_webApiKey: "none"
+
+tasks:
+
+# Recipe Specific server.cfg files
+  - action: download_github
+    src: https://github.com/TPZ-CORE/TPZ_txAdmin
+    ref: main
+    dest: ./temp/tpz_txAdminRecipe
+  
+  - action: move_path
+    src: ./temp/tpz_txAdminRecipe/server.cfg
+    dest: ./server.cfg
+  
+# Run Database SQL
+  - action: connect_database
+  - action: query_database
+    file: ./temp/tpz_txAdminRecipe/database.sql
+    
+# Move the icon to the root
+  - action: move_path
+    src: ./temp/tpz_txAdminRecipe/icon.png
+    dest: ./icon.png
+
+# Download default CFX resources
+  - action: download_github
+    src: https://github.com/TPZ-CORE/cfx-server-data
+    ref: master
+    subpath: resources
+    dest: ./resources/
+  - action: remove_path
+    path: ./resources/[CFX]/[gameplay]/chat
+    
+# Download TPZ-CORE CORE
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_core/tpz_core
+    ref: main
+    dest: ./temp/[TPZ]/tpz_core
+    
+# Download TPZ-CORE Characters
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_characters/tpz_characters
+    ref: main
+    dest: ./temp/[TPZ]/tpz_characters
+
+  # Download TPZ-CORE Inventory
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_inventory/tpz_inventory
+    ref: main
+    dest: ./temp/[TPZ]/tpz_inventory
+    
+  # Download TPZ-CORE Inventory
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_inventory_trade/tpz_inventory_trade
+    ref: main
+    dest: ./temp/[TPZ]/tpz_inventory_trade
