@@ -46,5 +46,5 @@
 
 # Credits and References
 
-Inspired and derived from: https://forum.cfx.re/t/how-to-setup-a-redm-server/918850
-Inspired and derived from: https://docs.fivem.net/docs/server-manual/setting-up-a-server-txadmin/
+- Inspired and derived from: https://forum.cfx.re/t/how-to-setup-a-redm-server/918850
+- Inspired and derived from: https://docs.fivem.net/docs/server-manual/setting-up-a-server-txadmin/
