@@ -43,7 +43,9 @@
 
 21. Click "Save & Run Server", and you're done!
 
+# Discord
 
+For farther support and explanation or joining our community, click [here](https://discord.gg/Ms7TR9VsAB).
 # Credits and References
 
 - Inspired and derived from: https://forum.cfx.re/t/how-to-setup-a-redm-server/918850
