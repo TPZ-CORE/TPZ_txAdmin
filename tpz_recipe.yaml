@@ -61,6 +61,13 @@ tasks:
     subpath: weathersync
     dest: ./resources/[standalone]/weathersync
 
+# Download interiors_ipl
+  - action: download_github
+    src: https://github.com/TPZ-CORE/interiors_ipl
+    ref: main
+    subpath: interiors_ipl
+    dest: ./resources/[standalone]/interiors_ipl
+    
 # Download TPZ-CORE CORE
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_core
