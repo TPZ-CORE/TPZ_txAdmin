@@ -42,3 +42,9 @@
 ![68747470733a2f2f646f63732e666976656d2e6e65742f7365727665722d73657475702f77696e646f77732d73746570322d31332e706e67](https://github.com/user-attachments/assets/f6faaa4d-825d-4486-a900-9aefedadc6f6)
 
 21. Click "Save & Run Server", and you're done!
+
+
+# Credits and References
+
+Inspired and derived from: https://forum.cfx.re/t/how-to-setup-a-redm-server/918850
+Inspired and derived from: https://docs.fivem.net/docs/server-manual/setting-up-a-server-txadmin/
