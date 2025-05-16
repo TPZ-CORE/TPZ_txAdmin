@@ -45,7 +45,8 @@
 
 # Discord
 
-For farther support and explanation or joining our community, click [here](https://discord.gg/Ms7TR9VsAB).
+For farther support and explanation or joining and becoming a part of our community, click [here](https://discord.gg/Ms7TR9VsAB).
+
 # Credits and References
 
 - Inspired and derived from: https://forum.cfx.re/t/how-to-setup-a-redm-server/918850
