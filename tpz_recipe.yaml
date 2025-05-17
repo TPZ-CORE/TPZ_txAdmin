@@ -96,6 +96,13 @@ tasks:
     subpath: tpz_inventory_trade
     dest: ./temp/[TPZ]/tpz_inventory_trade
 
+  # Download TPZ-CORE Weapons
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_weapons
+    ref: main
+    subpath: tpz_weapons
+    dest: ./temp/[TPZ]/tpz_weapons
+
   # Download TPZ-CORE Inputs
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_inputs
