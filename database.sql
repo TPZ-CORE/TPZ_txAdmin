@@ -1,30 +1,4 @@
 
--- Dumping structure for table tpzcore.banned_users
-CREATE TABLE IF NOT EXISTS `banned_users` (
-  `identifier` varchar(50) NOT NULL,
-  `steamname` varchar(50) DEFAULT NULL,
-  `banned` int(1) DEFAULT 0,
-  `bannedReason` longtext CHARACTER SET utf16 COLLATE utf16_unicode_ci DEFAULT 'N/A',
-  `warnings` int(11) DEFAULT 0,
-  PRIMARY KEY (`identifier`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
-
--- Dumping structure for table tpzcore.billing
-CREATE TABLE IF NOT EXISTS `billing` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `job` int(1) DEFAULT NULL,
-  `reason` varchar(50) DEFAULT NULL,
-  `identifier` longtext DEFAULT NULL,
-  `charidentifier` int(11) DEFAULT NULL,
-  `username` longtext DEFAULT NULL,
-  `issuer` longtext DEFAULT NULL,
-  `account` int(1) DEFAULT NULL,
-  `cost` int(11) DEFAULT NULL,
-  `date` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
-
 -- Dumping structure for table tpzcore.characters
 CREATE TABLE IF NOT EXISTS `characters` (
   `charidentifier` int(11) NOT NULL AUTO_INCREMENT,
@@ -57,6 +31,9 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `leveling_status` longtext NOT NULL DEFAULT '[]',
   `inactivity_time` int(50) DEFAULT 0,
   `identity_id` varchar(50) DEFAULT NULL,
+  `banned` int(1) DEFAULT 0,
+  `bannedReason` longtext DEFAULT 'N/A',
+  `warnings` int(11) DEFAULT 0,
   PRIMARY KEY (`charidentifier`),
   UNIQUE KEY `charidentifier` (`charidentifier`),
   KEY `identifier` (`identifier`),
@@ -65,6 +42,22 @@ CREATE TABLE IF NOT EXISTS `characters` (
   KEY `money` (`money`),
   KEY `group` (`group`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
+-- Dumping structure for table tpzcore.billing
+CREATE TABLE IF NOT EXISTS `billing` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `job` int(1) DEFAULT NULL,
+  `reason` varchar(50) DEFAULT NULL,
+  `identifier` longtext DEFAULT NULL,
+  `charidentifier` int(11) DEFAULT NULL,
+  `username` longtext DEFAULT NULL,
+  `issuer` longtext DEFAULT NULL,
+  `account` int(1) DEFAULT NULL,
+  `cost` int(11) DEFAULT NULL,
+  `date` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping structure for table tpzcore.containers
 CREATE TABLE IF NOT EXISTS `containers` (
