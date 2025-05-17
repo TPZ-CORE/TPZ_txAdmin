@@ -257,6 +257,13 @@ tasks:
     subpath: tpz_goldpanning
     dest: ./temp/[TPZ]/tpz_goldpanning
 
+  # Download TPZ-CORE Zone Notify
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_zonenotify
+    ref: main
+    subpath: tpz_zonenotify
+    dest: ./temp/[TPZ]/tpz_zonenotify
+
   # Download TPZ-CORE Versions
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_versions
