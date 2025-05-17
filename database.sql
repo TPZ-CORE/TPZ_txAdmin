@@ -31,8 +31,6 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `leveling_status` longtext NOT NULL DEFAULT '[]',
   `inactivity_time` int(50) DEFAULT 0,
   `identity_id` varchar(50) DEFAULT NULL,
-  `banned` int(1) DEFAULT 0,
-  `bannedReason` longtext DEFAULT 'N/A',
   `warnings` int(11) DEFAULT 0,
   PRIMARY KEY (`charidentifier`),
   UNIQUE KEY `charidentifier` (`charidentifier`),
@@ -42,6 +40,15 @@ CREATE TABLE IF NOT EXISTS `characters` (
   KEY `money` (`money`),
   KEY `group` (`group`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
+-- Dumping structure for table tpzcore.banned_users
+CREATE TABLE IF NOT EXISTS `banned_users` (
+  `identifier` varchar(50) NOT NULL,
+  `steamname` varchar(50) DEFAULT NULL,
+  `banned` int(1) DEFAULT 0,
+  `bannedReason` longtext CHARACTER SET utf16 COLLATE utf16_unicode_ci DEFAULT 'N/A',
+  PRIMARY KEY (`identifier`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- Dumping structure for table tpzcore.billing
 CREATE TABLE IF NOT EXISTS `billing` (
