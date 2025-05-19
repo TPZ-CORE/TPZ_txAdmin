@@ -257,6 +257,13 @@ tasks:
     subpath: tpz_goldpanning
     dest: ./resources/[tpz-plugins]/tpz_goldpanning
 
+  # Download TPZ-CORE Hunting
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_hunting
+    ref: main
+    subpath: tpz_hunting
+    dest: ./resources/[tpz-plugins]/tpz_hunting
+    
   # Download TPZ-CORE Zone Notify
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_zonenotify
