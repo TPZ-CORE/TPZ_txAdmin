@@ -1342,6 +1342,15 @@ CREATE TABLE IF NOT EXISTS `passports` (
   PRIMARY KEY (`identityId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
+CREATE TABLE IF NOT EXISTS `bank_accounts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `iban` varchar(50) NOT NULL,
+  `identifier` varchar(50) NOT NULL,
+  `charidentifier` int(11) NOT NULL,
+  `accounts` longtext DEFAULT '{"cash":0, "gold":0}',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
 -- Dumping structure for table tpzcore.society
 CREATE TABLE IF NOT EXISTS `society` (
   `job` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
