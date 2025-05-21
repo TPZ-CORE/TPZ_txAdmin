@@ -270,6 +270,13 @@ tasks:
     ref: main
     subpath: tpz_banking
     dest: ./resources/[tpz-plugins]/tpz_banking
+
+  # Download TPZ-CORE Medics
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_medics
+    ref: main
+    subpath: tpz_medics
+    dest: ./resources/[tpz-plugins]/tpz_medics
     
   # Download TPZ-CORE Zone Notify
   - action: download_github
