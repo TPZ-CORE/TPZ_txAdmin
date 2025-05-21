@@ -263,6 +263,13 @@ tasks:
     ref: main
     subpath: tpz_hunting
     dest: ./resources/[tpz-plugins]/tpz_hunting
+
+  # Download TPZ-CORE Banking
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_banking
+    ref: main
+    subpath: tpz_banking
+    dest: ./resources/[tpz-plugins]/tpz_banking
     
   # Download TPZ-CORE Zone Notify
   - action: download_github
