@@ -1358,8 +1358,6 @@ CREATE TABLE IF NOT EXISTS `society` (
   PRIMARY KEY (`job`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
--- Dumping data for table tpzcore.society: ~40 rows (approximately)
-/*!40000 ALTER TABLE `society` DISABLE KEYS */;
 INSERT INTO `society` (`job`, `ledger`) VALUES
 	('annesburggunsmith', 0),
 	('anneshorsetrainer', 0),
