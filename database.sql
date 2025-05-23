@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
 CREATE TABLE IF NOT EXISTS `users` (
   `identifier` varchar(50) NOT NULL,
   `steamname` varchar(50) NOT NULL,
+  `max_chars` int(1) DEFAULT 3,
   `banned_duration` int(11) DEFAULT 0,
   `banned_reason` longtext DEFAULT NULL,
   `warnings` int(11) DEFAULT 0,
