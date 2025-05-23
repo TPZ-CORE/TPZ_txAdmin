@@ -96,6 +96,13 @@ tasks:
     subpath: tpz_inventory_trade
     dest: ./resources/[tpz-essentials]/tpz_inventory_trade
 
+  # Download TPZ-CORE Admin
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_admin
+    ref: main
+    subpath: tpz_admin
+    dest: ./resources/[tpz-essentials]/tpz_admin
+    
   # Download TPZ-CORE Inputs
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_inputs
