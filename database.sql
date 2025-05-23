@@ -40,12 +40,12 @@ CREATE TABLE IF NOT EXISTS `characters` (
   KEY `group` (`group`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
--- Dumping structure for table tpzcore.banned_users
-CREATE TABLE IF NOT EXISTS `banned_users` (
+-- Dumping structure for table tpzcore.users
+CREATE TABLE IF NOT EXISTS `users` (
   `identifier` varchar(50) NOT NULL,
   `steamname` varchar(50) NOT NULL,
-  `banned` int(1) DEFAULT 0,
-  `bannedReason` longtext DEFAULT NULL,
+  `banned_duration` int(11) DEFAULT 0,
+  `banned_reason` longtext DEFAULT NULL,
   `warnings` int(11) DEFAULT 0,
   PRIMARY KEY (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
