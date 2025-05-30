@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `leveling_status` longtext NOT NULL DEFAULT '[]',
   `inactivity_time` int(50) DEFAULT 0,
   `identity_id` varchar(50) DEFAULT NULL,
+	`jailed_until` INT(11) DEFAULT 0,
   PRIMARY KEY (`charidentifier`),
   UNIQUE KEY `charidentifier` (`charidentifier`),
   KEY `identifier` (`identifier`),
