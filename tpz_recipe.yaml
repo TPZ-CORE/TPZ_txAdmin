@@ -291,6 +291,13 @@ tasks:
     ref: main
     subpath: tpz_medics
     dest: ./resources/[tpz-plugins]/tpz_medics
+
+  # Download TPZ-CORE Police
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_police
+    ref: main
+    subpath: tpz_police
+    dest: ./resources/[tpz-plugins]/tpz_police
     
   # Download TPZ-CORE Zone Notify
   - action: download_github
