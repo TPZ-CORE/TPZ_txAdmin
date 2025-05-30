@@ -145,6 +145,13 @@ tasks:
     subpath: tpz_weapons
     dest: ./resources/[tpz-plugins]/tpz_weapons
 
+  # Download TPZ-CORE Housing
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_housing
+    ref: main
+    subpath: tpz_housing
+    dest: ./resources/[tpz-plugins]/tpz_housing
+
   # Download TPZ-CORE Leveling
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_leveling
