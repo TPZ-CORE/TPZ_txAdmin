@@ -299,6 +299,13 @@ tasks:
     subpath: tpz_police
     dest: ./resources/[tpz-plugins]/tpz_police
     
+  # Download TPZ-CORE Usable Items
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_usable_items
+    ref: main
+    subpath: tpz_usable_items
+    dest: ./resources/[tpz-plugins]/tpz_usable_items
+    
   # Download TPZ-CORE Zone Notify
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_zonenotify
