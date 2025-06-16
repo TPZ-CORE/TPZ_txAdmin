@@ -81,6 +81,16 @@ CREATE TABLE IF NOT EXISTS `containers` (
   UNIQUE KEY `ID` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
+-- Dumping structure for table tpzcore.outfits
+CREATE TABLE IF NOT EXISTS `outfits` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `identifier` varchar(50) NOT NULL,
+  `charidentifier` int(11) DEFAULT NULL,
+  `title` varchar(50) DEFAULT NULL,
+  `comps` longtext DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
 -- Dumping structure for table tpzcore.crafting
 CREATE TABLE IF NOT EXISTS `crafting` (
   `job` varchar(45) NOT NULL,
