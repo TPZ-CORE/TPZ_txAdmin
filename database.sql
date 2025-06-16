@@ -1402,6 +1402,7 @@ CREATE TABLE IF NOT EXISTS `passports` (
   `height` varchar(50) NOT NULL DEFAULT '0',
   `nationality` varchar(50) NOT NULL,
   `dob` varchar(50) NOT NULL,
+  `sex` int(1) NOT NULL DEFAULT 0,
   `gender` varchar(50) NOT NULL,
   `registration_date` varchar(50) NOT NULL,
   `expiration_duration` int(11) NOT NULL DEFAULT 0,
