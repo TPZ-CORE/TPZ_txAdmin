@@ -166,6 +166,13 @@ tasks:
     subpath: tpz_discord_whitelist
     dest: ./resources/[tpz-plugins]/tpz_discord_whitelist
 
+  # Download TPZ-CORE Subscriptions
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_subscriptions
+    ref: main
+    subpath: tpz_subscriptions
+    dest: ./resources/[tpz-plugins]/tpz_subscriptions
+    
   # Download TPZ-CORE Boilerplate
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_boilerplate
