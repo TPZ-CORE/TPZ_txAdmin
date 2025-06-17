@@ -54,6 +54,13 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
+-- Dumping structure for table tpzcore.subscriptions
+CREATE TABLE IF NOT EXISTS `subscriptions` (
+  `identifier` varchar(50) NOT NULL,
+  `expiration_date` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`identifier`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
 -- Dumping structure for table tpzcore.billing
 CREATE TABLE IF NOT EXISTS `billing` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
