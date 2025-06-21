@@ -124,6 +124,13 @@ tasks:
     subpath: tpz_menu_base
     dest: ./resources/[tpz-utilities]/tpz_menu_base
 
+  # Download TPZ-CORE Passports
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_passports
+    ref: main
+    subpath: tpz_passports
+    dest: ./resources/[tpz-utilities]/tpz_passports
+
   # Download TPZ-CORE Skillcheck
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_skillcheck
