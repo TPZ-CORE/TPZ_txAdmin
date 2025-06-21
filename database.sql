@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `hours` float NOT NULL DEFAULT 0,
   `meta` longtext NOT NULL DEFAULT '[]',
   `inventory` longtext DEFAULT '[]',
+	 `inventory_capacity` float DEFAULT 0,
   `leveling_status` longtext NOT NULL DEFAULT '[]',
   `inactivity_time` int(50) DEFAULT 0,
   `identity_id` varchar(50) DEFAULT NULL,
