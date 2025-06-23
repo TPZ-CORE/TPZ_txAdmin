@@ -10,10 +10,10 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `gender` int(11) DEFAULT 0,
   `dob` varchar(50) DEFAULT NULL,
   `skin` varchar(50) DEFAULT NULL,
-  `skinComp` longtext DEFAULT '[]',
+  `skinComp` json DEFAULT '[]',
   `job` varchar(50) DEFAULT 'unemployed',
   `jobGrade` int(2) DEFAULT 0,
-  `accounts` longtext DEFAULT '{"cash":1,"gold":0,"black_money":0}',
+  `accounts` json DEFAULT '{"cash":1,"gold":0,"black_money":0}',
   `healthOuter` int(4) DEFAULT 500,
   `healthInner` int(4) DEFAULT 100,
   `staminaOuter` int(4) DEFAULT 100,
@@ -22,10 +22,10 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `isdead` int(1) DEFAULT 0,
   `default_weapon` varchar(50) DEFAULT '0',
   `hours` float NOT NULL DEFAULT 0,
-  `meta` longtext NOT NULL DEFAULT '[]',
-  `inventory` longtext DEFAULT '[]',
+  `meta` json NOT NULL DEFAULT '[]',
+  `inventory` json DEFAULT '[]',
   `inventory_capacity` int(11) DEFAULT 0,
-  `leveling_status` longtext NOT NULL DEFAULT '[]',
+  `leveling_status` json NOT NULL DEFAULT '[]',
   `inactivity_time` int(50) DEFAULT 0,
   `identity_id` varchar(50) DEFAULT NULL,
   `jailed_until` INT(11) DEFAULT 0,
@@ -73,9 +73,9 @@ CREATE TABLE IF NOT EXISTS `billing` (
 CREATE TABLE IF NOT EXISTS `containers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` longtext DEFAULT NULL,
-  `items` longtext NOT NULL DEFAULT '[]',
+  `items` json NOT NULL DEFAULT '[]',
   `weight` int(11) NOT NULL DEFAULT 0,
-  `data` longtext DEFAULT '[]',
+  `data` json DEFAULT '[]',
   PRIMARY KEY (`id`),
   UNIQUE KEY `ID` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `outfits` (
 -- Dumping structure for table tpzcore.crafting
 CREATE TABLE IF NOT EXISTS `crafting` (
   `job` varchar(45) NOT NULL,
-  `unlocked_recipes` longtext DEFAULT '[]',
+  `unlocked_recipes` json DEFAULT '[]',
   `level` int(11) DEFAULT 1,
   `experience` int(11) DEFAULT 0,
   `actions` int(11) DEFAULT 0,
@@ -105,10 +105,10 @@ CREATE TABLE IF NOT EXISTS `properties` (
   `name` varchar(50) NOT NULL,
   `identifier` varchar(50) DEFAULT NULL,
   `charidentifier` int(11) DEFAULT 0,
-  `storage` longtext DEFAULT '{}',
-  `wardrobe` longtext DEFAULT '{}',
+  `storage` json DEFAULT '{}',
+  `wardrobe` json DEFAULT '{}',
   `ledger` int(11) DEFAULT 0,
-  `keyholders` longtext DEFAULT '[]',
+  `keyholders` json DEFAULT '[]',
   `owned` int(1) DEFAULT 0,
   `duration` int(11) DEFAULT 0,
   `paid` int(1) DEFAULT 0,
@@ -1414,7 +1414,7 @@ CREATE TABLE IF NOT EXISTS `bank_accounts` (
   `iban` varchar(50) NOT NULL,
   `identifier` varchar(50) NOT NULL,
   `charidentifier` int(11) NOT NULL,
-  `accounts` longtext DEFAULT '{"cash":0, "gold":0}',
+  `accounts` json DEFAULT '{"cash":0, "gold":0}',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
