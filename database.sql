@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `jailed_until` INT(11) DEFAULT 0,
   `selected_horse_index` INT(11) DEFAULT 0,
   PRIMARY KEY (`charidentifier`),
-  UNIQUE KEY `charidentifier` (`charidentifier`),
+  UNIQUE KEY `charidentifier` (`charidentifier`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- Dumping structure for table tpzcore.users
