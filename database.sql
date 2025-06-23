@@ -10,10 +10,10 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `gender` int(11) DEFAULT 0,
   `dob` varchar(50) DEFAULT NULL,
   `skin` varchar(50) DEFAULT NULL,
-  `skinComp` json DEFAULT '[]',
+  `skinComp` longtext DEFAULT '[]',
   `job` varchar(50) DEFAULT 'unemployed',
   `jobGrade` int(2) DEFAULT 0,
-  `accounts` json DEFAULT '{"cash":1,"gold":0,"black_money":0}',
+  `accounts` longtext DEFAULT '{"cash":1,"gold":0,"black_money":0}',
   `healthOuter` int(4) DEFAULT 500,
   `healthInner` int(4) DEFAULT 100,
   `staminaOuter` int(4) DEFAULT 100,
@@ -22,10 +22,10 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `isdead` int(1) DEFAULT 0,
   `default_weapon` varchar(50) DEFAULT '0',
   `hours` float NOT NULL DEFAULT 0,
-  `meta` json NOT NULL DEFAULT '[]',
-  `inventory` json DEFAULT '[]',
+  `meta` longtext NOT NULL DEFAULT '[]',
+  `inventory` longtext DEFAULT '[]',
   `inventory_capacity` int(11) DEFAULT 0,
-  `leveling_status` json NOT NULL DEFAULT '[]',
+  `leveling_status` longtext NOT NULL DEFAULT '[]',
   `inactivity_time` int(50) DEFAULT 0,
   `identity_id` varchar(50) DEFAULT NULL,
   `jailed_until` INT(11) DEFAULT 0,
@@ -73,9 +73,9 @@ CREATE TABLE IF NOT EXISTS `billing` (
 CREATE TABLE IF NOT EXISTS `containers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` longtext DEFAULT NULL,
-  `items` json NOT NULL DEFAULT '[]',
+  `items` longtext NOT NULL DEFAULT '[]',
   `weight` int(11) NOT NULL DEFAULT 0,
-  `data` json DEFAULT '[]',
+  `data` longtext DEFAULT '[]',
   PRIMARY KEY (`id`),
   UNIQUE KEY `ID` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
@@ -93,7 +93,7 @@ CREATE TABLE IF NOT EXISTS `outfits` (
 -- Dumping structure for table tpzcore.crafting
 CREATE TABLE IF NOT EXISTS `crafting` (
   `job` varchar(45) NOT NULL,
-  `unlocked_recipes` json DEFAULT '[]',
+  `unlocked_recipes` longtext DEFAULT '[]',
   `level` int(11) DEFAULT 1,
   `experience` int(11) DEFAULT 0,
   `actions` int(11) DEFAULT 0,
@@ -105,15 +105,110 @@ CREATE TABLE IF NOT EXISTS `properties` (
   `name` varchar(50) NOT NULL,
   `identifier` varchar(50) DEFAULT NULL,
   `charidentifier` int(11) DEFAULT 0,
-  `storage` json DEFAULT '{}',
-  `wardrobe` json DEFAULT '{}',
+  `storage` longtext DEFAULT '{}',
+  `wardrobe` longtext DEFAULT '{}',
   `ledger` int(11) DEFAULT 0,
-  `keyholders` json DEFAULT '[]',
+  `keyholders` longtext DEFAULT '[]',
   `owned` int(1) DEFAULT 0,
   `duration` int(11) DEFAULT 0,
   `paid` int(1) DEFAULT 0,
   PRIMARY KEY (`name`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
+-- Dumping structure for table tpzcore.makeup
+CREATE TABLE IF NOT EXISTS `makeup` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `identifier` varchar(45) NOT NULL,
+  `charidentifier` int(11) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `comps` longtext DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
+-- Dumping structure for table tpzcore.outfits
+CREATE TABLE IF NOT EXISTS `outfits` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `identifier` varchar(45) NOT NULL,
+  `charidentifier` int(11) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  `comps` longtext DEFAULT NULL,
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
+CREATE TABLE IF NOT EXISTS `bank_accounts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `iban` varchar(50) NOT NULL,
+  `identifier` varchar(50) NOT NULL,
+  `charidentifier` int(11) NOT NULL,
+  `accounts` longtext DEFAULT '{"cash":0, "gold":0}',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
+-- Dumping structure for table tpzcore.passports
+CREATE TABLE IF NOT EXISTS `passports` (
+  `identityId` varchar(50) NOT NULL DEFAULT '',
+  `identifier` varchar(50) NOT NULL,
+  `charidentifier` int(11) NOT NULL,
+  `steamname` varchar(50) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `dob` varchar(50) NOT NULL,
+  `registration_date` varchar(50) NOT NULL,
+  `expiration_date` int(11) NOT NULL DEFAULT 0,
+  `avatar_url` longtext NOT NULL,
+  PRIMARY KEY (`identityId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
+-- Dumping structure for table tpzcore.society
+CREATE TABLE IF NOT EXISTS `society` (
+  `job` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `ledger` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`job`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
+
+INSERT INTO `society` (`job`, `ledger`) VALUES
+	('annesburggunsmith', 0),
+	('anneshorsetrainer', 0),
+	('beekeeper', 0),
+	('blackhorsetrainer', 0),
+	('blacksmith', 0),
+	('bwblacksmith', 0),
+	('bwcigarettes', 0),
+	('bwgunsmith', 0),
+	('bwsaloon', 0),
+	('collector', 0),
+	('comanche', 0),
+	('gunsmith', 0),
+	('horsetrainer', 0),
+	('irishsaloon', 0),
+	('keanessaloon', 0),
+	('medic', 0),
+	('police', 0),
+	('rguns', 0),
+	('rhsaloon', 0),
+	('sdblacksmith', 0),
+	('sdgunsmith', 0),
+	('sdhorsetrainer', 0),
+	('strblacksmith', 0),
+	('strhorsetrainer', 0),
+	('strsaloon', 0),
+	('strwgunsmith', 0),
+	('stsaloon', 0),
+	('thieveshorsetrainer', 0),
+	('thieveshostel', 0),
+	('thievessaloon', 0),
+	('toolshop', 0),
+	('twgunsmith', 0),
+	('valgunsmith', 0),
+	('valsaloon', 0),
+	('vanblacksmith', 0),
+	('vanhornsaloon', 0),
+	('vet', 0),
+	('vsmithsaloon', 0),
+	('wapitishaman', 0),
+	('woodworker', 0);
+/*!40000 ALTER TABLE `society` ENABLE KEYS */;
+
 
 -- Dumping structure for table tpzcore.horses
 CREATE TABLE IF NOT EXISTS `horses` (
@@ -1368,117 +1463,3 @@ INSERT INTO `items` (`id`, `item`, `label`, `weight`, `remove`, `type`, `descrip
 	(1100, 'yeast', 'Yeast', 0, 0, 'item', 'nothing', 'none', 1, 1, 0),
 	(1101, 'yogurt', 'Yogurt', 0, 0, 'item', 'nothing', 'none', 1, 1, 0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
-
--- Dumping structure for table tpzcore.makeup
-CREATE TABLE IF NOT EXISTS `makeup` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `identifier` varchar(45) NOT NULL,
-  `charidentifier` int(11) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `comps` longtext DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
-
--- Dumping structure for table tpzcore.outfits
-CREATE TABLE IF NOT EXISTS `outfits` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `identifier` varchar(45) NOT NULL,
-  `charidentifier` int(11) DEFAULT NULL,
-  `title` varchar(255) DEFAULT NULL,
-  `comps` longtext DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
-
-
--- Dumping structure for table tpzcore.passports
-CREATE TABLE IF NOT EXISTS `passports` (
-  `identityId` varchar(50) NOT NULL DEFAULT '',
-  `identifier` varchar(50) NOT NULL,
-  `charidentifier` int(11) NOT NULL,
-  `steamname` varchar(50) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `eyes` varchar(50) DEFAULT NULL,
-  `height` varchar(50) NOT NULL DEFAULT '0',
-  `nationality` varchar(50) NOT NULL,
-  `dob` varchar(50) NOT NULL,
-  `sex` int(1) NOT NULL DEFAULT 0,
-  `gender` varchar(50) NOT NULL,
-  `registration_date` varchar(50) NOT NULL,
-  `expiration_duration` int(11) NOT NULL DEFAULT 0,
-  `url` longtext NOT NULL,
-  PRIMARY KEY (`identityId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
-
-CREATE TABLE IF NOT EXISTS `bank_accounts` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `iban` varchar(50) NOT NULL,
-  `identifier` varchar(50) NOT NULL,
-  `charidentifier` int(11) NOT NULL,
-  `accounts` json DEFAULT '{"cash":0, "gold":0}',
-  PRIMARY KEY (`id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
-
--- Dumping structure for table tpzcore.passports
-CREATE TABLE IF NOT EXISTS `passports` (
-  `identityId` varchar(50) NOT NULL DEFAULT '',
-  `identifier` varchar(50) NOT NULL,
-  `charidentifier` int(11) NOT NULL,
-  `steamname` varchar(50) NOT NULL,
-  `firstname` varchar(50) NOT NULL,
-  `lastname` varchar(50) NOT NULL,
-  `dob` varchar(50) NOT NULL,
-  `registration_date` varchar(50) NOT NULL,
-  `expiration_date` int(11) NOT NULL DEFAULT 0,
-  `avatar_url` longtext NOT NULL,
-  PRIMARY KEY (`identityId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
-
--- Dumping structure for table tpzcore.society
-CREATE TABLE IF NOT EXISTS `society` (
-  `job` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
-  `ledger` int(11) NOT NULL DEFAULT 0,
-  PRIMARY KEY (`job`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
-
-INSERT INTO `society` (`job`, `ledger`) VALUES
-	('annesburggunsmith', 0),
-	('anneshorsetrainer', 0),
-	('beekeeper', 0),
-	('blackhorsetrainer', 0),
-	('blacksmith', 0),
-	('bwblacksmith', 0),
-	('bwcigarettes', 0),
-	('bwgunsmith', 0),
-	('bwsaloon', 0),
-	('collector', 0),
-	('comanche', 0),
-	('gunsmith', 0),
-	('horsetrainer', 0),
-	('irishsaloon', 0),
-	('keanessaloon', 0),
-	('medic', 0),
-	('police', 0),
-	('rguns', 0),
-	('rhsaloon', 0),
-	('sdblacksmith', 0),
-	('sdgunsmith', 0),
-	('sdhorsetrainer', 0),
-	('strblacksmith', 0),
-	('strhorsetrainer', 0),
-	('strsaloon', 0),
-	('strwgunsmith', 0),
-	('stsaloon', 0),
-	('thieveshorsetrainer', 0),
-	('thieveshostel', 0),
-	('thievessaloon', 0),
-	('toolshop', 0),
-	('twgunsmith', 0),
-	('valgunsmith', 0),
-	('valsaloon', 0),
-	('vanblacksmith', 0),
-	('vanhornsaloon', 0),
-	('vet', 0),
-	('vsmithsaloon', 0),
-	('wapitishaman', 0),
-	('woodworker', 0);
-/*!40000 ALTER TABLE `society` ENABLE KEYS */;
