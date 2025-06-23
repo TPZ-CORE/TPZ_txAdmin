@@ -32,10 +32,6 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `selected_horse_index` INT(11) DEFAULT 0,
   PRIMARY KEY (`charidentifier`),
   UNIQUE KEY `charidentifier` (`charidentifier`),
-  KEY `identifier` (`identifier`),
-  KEY `coords` (`coords`(768)),
-  KEY `skinComp` (`skinComp`(768)),
-  KEY `group` (`group`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- Dumping structure for table tpzcore.users
