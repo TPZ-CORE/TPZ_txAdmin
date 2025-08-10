@@ -145,6 +145,13 @@ tasks:
     subpath: tpz_vehiclefixes
     dest: ./resources/[tpz-utilities]/tpz_vehiclefixes
 
+  # Download TPZ-CORE Stables
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_stables
+    ref: main
+    subpath: tpz_stables
+    dest: ./resources/[tpz-plugins]/tpz_stables
+
   # Download TPZ-CORE Weapons
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_weapons
