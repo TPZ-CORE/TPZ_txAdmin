@@ -223,6 +223,8 @@ CREATE TABLE IF NOT EXISTS `horses` (
   `age` int(11) NOT NULL DEFAULT 0,
   `sex` int(11) NOT NULL DEFAULT 0,
   `training_experience` int(11) DEFAULT 0,
+  `training_stage_index` int(11) DEFAULT 1,
+  `training_stage_type` varchar(50) DEFAULT NULL,
   `breeding` int(11) DEFAULT 0,
   `container` int(11) DEFAULT 0,
   `isdead` int(11) NOT NULL DEFAULT 0,
@@ -1463,3 +1465,4 @@ INSERT INTO `items` (`id`, `item`, `label`, `weight`, `remove`, `type`, `descrip
 	(1100, 'yeast', 'Yeast', 0, 0, 'item', 'nothing', 'none', 1, 1, 0),
 	(1101, 'yogurt', 'Yogurt', 0, 0, 'item', 'nothing', 'none', 1, 1, 0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
+
