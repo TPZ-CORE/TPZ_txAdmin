@@ -43,6 +43,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `banned_reason` longtext DEFAULT NULL,
   `warnings` int(11) DEFAULT 0,
   `inactivity_time` INT(11) DEFAULT 0,
+  `notified_inactivity` INT(1) DEFAULT 0,
   PRIMARY KEY (`identifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
