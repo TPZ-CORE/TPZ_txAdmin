@@ -306,6 +306,13 @@ tasks:
     subpath: tpz_banking
     dest: ./resources/[tpz-plugins]/tpz_banking
 
+  # Download TPZ-CORE Water Actions
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_water_actions
+    ref: main
+    subpath: tpz_water_actions
+    dest: ./resources/[tpz-plugins]/tpz_water_actions
+
   # Download TPZ-CORE Medics
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_medics
