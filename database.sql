@@ -29,6 +29,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `inactivity_time` int(50) DEFAULT 0,
   `identity_id` varchar(50) DEFAULT NULL,
   `jailed_until` INT(11) DEFAULT 0,
+	`selected_wagon_index` INT(11) DEFAULT 0,
   `selected_horse_index` INT(11) DEFAULT 0,
   PRIMARY KEY (`charidentifier`),
   UNIQUE KEY `charidentifier` (`charidentifier`)
@@ -241,11 +242,10 @@ CREATE TABLE IF NOT EXISTS `wagons` (
   `charidentifier` int(11) NOT NULL,
   `model` varchar(50) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `stats` longtext NOT NULL,
+  `wheels` longtext NOT NULL,
   `components` longtext NOT NULL,
   `type` varchar(50) NOT NULL,
   `container` int(11) DEFAULT 0,
-  `broken` int(11) DEFAULT 0,
   `bought_account` int(11) DEFAULT -1,
   `date` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
@@ -1466,4 +1466,5 @@ INSERT INTO `items` (`id`, `item`, `label`, `weight`, `remove`, `type`, `descrip
 	(1100, 'yeast', 'Yeast', 0, 0, 'item', 'nothing', 'none', 1, 1, 0),
 	(1101, 'yogurt', 'Yogurt', 0, 0, 'item', 'nothing', 'none', 1, 1, 0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
+
 
