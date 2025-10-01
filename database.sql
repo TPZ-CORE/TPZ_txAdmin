@@ -9,7 +9,6 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `lastname` varchar(50) DEFAULT ' ',
   `gender` int(11) DEFAULT 0,
   `dob` varchar(50) DEFAULT NULL,
-  `skin` varchar(50) DEFAULT NULL,
   `skinComp` longtext DEFAULT '[]',
   `job` varchar(50) DEFAULT 'unemployed',
   `jobGrade` int(2) DEFAULT 0,
@@ -1466,5 +1465,6 @@ INSERT INTO `items` (`id`, `item`, `label`, `weight`, `remove`, `type`, `descrip
 	(1100, 'yeast', 'Yeast', 0, 0, 'item', 'nothing', 'none', 1, 1, 0),
 	(1101, 'yogurt', 'Yogurt', 0, 0, 'item', 'nothing', 'none', 1, 1, 0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
+
 
 
