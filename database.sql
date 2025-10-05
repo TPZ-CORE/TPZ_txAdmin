@@ -82,13 +82,13 @@ CREATE TABLE IF NOT EXISTS `containers` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
 
 -- Dumping structure for table tpzcore.outfits
+
 CREATE TABLE IF NOT EXISTS `outfits` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `identifier` varchar(50) NOT NULL,
-  `charidentifier` int(11) DEFAULT NULL,
-  `title` varchar(50) DEFAULT NULL,
-  `comps` longtext DEFAULT NULL,
-  PRIMARY KEY (`id`) USING BTREE
+	`identifier` varchar(45) NOT NULL,
+	`charidentifier` int(11) DEFAULT NULL,
+	`purchased` longtext NOT NULL DEFAULT '[]',
+	`outfits` longtext NOT NULL DEFAULT '[]',
+  PRIMARY KEY (`charidentifier`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
 
 -- Dumping structure for table tpzcore.crafting
@@ -1465,6 +1465,7 @@ INSERT INTO `items` (`id`, `item`, `label`, `weight`, `remove`, `type`, `descrip
 	(1100, 'yeast', 'Yeast', 0, 0, 'item', 'nothing', 'none', 1, 1, 0),
 	(1101, 'yogurt', 'Yogurt', 0, 0, 'item', 'nothing', 'none', 1, 1, 0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
+
 
 
 
