@@ -159,6 +159,13 @@ tasks:
     subpath: tpz_weapons
     dest: ./resources/[tpz-plugins]/tpz_weapons
 
+  # Download TPZ-CORE Clothing
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_clothing
+    ref: main
+    subpath: tpz_clothing
+    dest: ./resources/[tpz-plugins]/tpz_clothing
+    
   # Download TPZ-CORE Housing
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_housing
