@@ -48,11 +48,11 @@ tasks:
     dest: ./resources/[standalone]/pma-voice
 
 # Download oxmysql
-#  - action: download_github
-#    src: https://github.com/TPZ-CORE/oxmysql
-#    ref: main
-#    subpath: oxmysql
-#    dest: ./resources/[standalone]/oxmysql
+  - action: download_github
+    src: https://github.com/TPZ-CORE/oxmysql
+    ref: main
+    subpath: oxmysql
+    dest: ./resources/[standalone]/oxmysql
 
 # Download weathersync
   - action: download_github
