@@ -222,6 +222,13 @@ tasks:
     subpath: tpz_doorlocks
     dest: ./resources/[tpz-plugins]/tpz_doorlocks
 
+  # Download TPZ-CORE Death Logs
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_death_logs
+    ref: main
+    subpath: tpz_death_logs
+    dest: ./resources/[tpz-plugins]/tpz_death_logs
+    
   # Download TPZ-CORE Object Loader
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_objectloader
