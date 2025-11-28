@@ -23,6 +23,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `hours` float NOT NULL DEFAULT 0,
   `meta` longtext NOT NULL DEFAULT '[]',
   `inventory` longtext DEFAULT '[]',
+  `inventory_slots` longtext COLLATE utf8mb4_bin DEFAULT '{"1": { "item": "slot1", "type" : "slot", "action" : "slot1" },"2": { "item": "slot2", "type" : "slot", "action" : "slot2" },"3": { "item": "slot3", "type" : "slot", "action" : "slot3" },"4": { "item": "slot4", "type" : "slot", "action" : "slot1"  } }',
   `inventory_capacity` int(11) DEFAULT 0,
   `leveling_status` longtext NOT NULL DEFAULT '[]',
   `inactivity_time` int(50) DEFAULT 0,
@@ -1465,6 +1466,7 @@ INSERT INTO `items` (`id`, `item`, `label`, `weight`, `remove`, `type`, `descrip
 	(1100, 'yeast', 'Yeast', 0, 0, 'item', 'nothing', 'none', 1, 1, 0),
 	(1101, 'yogurt', 'Yogurt', 0, 0, 'item', 'nothing', 'none', 1, 1, 0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
+
 
 
 
