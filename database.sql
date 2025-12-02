@@ -247,6 +247,7 @@ CREATE TABLE IF NOT EXISTS `wagons` (
   `type` varchar(50) NOT NULL,
   `container` int(11) DEFAULT 0,
   `bought_account` int(11) DEFAULT -1,
+  `stow` longtext DEFAULT '[]',
   `date` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
@@ -1466,6 +1467,7 @@ INSERT INTO `items` (`id`, `item`, `label`, `weight`, `remove`, `type`, `descrip
 	(1100, 'yeast', 'Yeast', 0, 0, 'item', 'nothing', 'none', 1, 1, 0),
 	(1101, 'yogurt', 'Yogurt', 0, 0, 'item', 'nothing', 'none', 1, 1, 0);
 /*!40000 ALTER TABLE `items` ENABLE KEYS */;
+
 
 
 
