@@ -369,13 +369,6 @@ tasks:
     subpath: tpz_zonenotify
     dest: ./resources/[tpz-plugins]/tpz_zonenotify
 
-  # Download TPZ-CORE Versions
-  - action: download_github
-    src: https://github.com/TPZ-CORE/tpz_versions
-    ref: main
-    subpath: tpz_versions
-    dest: ./resources/[tpz-plugins]/tpz_versions
-
   # Download TPZ-CORE Users Inactivity
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_users_inactivity
