@@ -173,6 +173,13 @@ tasks:
     subpath: tpz_clothing
     dest: ./resources/[tpz-plugins]/tpz_clothing
     
+  # Download TPZ-CORE Barbers
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_barbers
+    ref: main
+    subpath: tpz_barbers
+    dest: ./resources/[tpz-plugins]/tpz_barbers
+    
   # Download TPZ-CORE Housing
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_housing
