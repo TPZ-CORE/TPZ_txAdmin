@@ -180,6 +180,13 @@ tasks:
     subpath: tpz_barbers
     dest: ./resources/[tpz-plugins]/tpz_barbers
     
+  # Download TPZ-CORE Makeup
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_makeup
+    ref: main
+    subpath: tpz_makeup
+    dest: ./resources/[tpz-plugins]/tpz_makeup
+    
   # Download TPZ-CORE Housing
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_housing
