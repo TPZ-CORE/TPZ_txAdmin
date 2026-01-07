@@ -130,7 +130,14 @@ tasks:
     ref: main
     subpath: tpz_passports
     dest: ./resources/[tpz-utilities]/tpz_passports
-
+    
+  # Download TPZ-CORE 3DME
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_3dme
+    ref: main
+    subpath: tpz_3dme
+    dest: ./resources/[tpz-utilities]/tpz_3dme
+    
   # Download TPZ-CORE Search
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_search
