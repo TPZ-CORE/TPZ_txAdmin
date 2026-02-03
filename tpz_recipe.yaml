@@ -354,6 +354,13 @@ tasks:
     ref: main
     subpath: tpz_water_actions
     dest: ./resources/[tpz-plugins]/tpz_water_actions
+    
+  # Download TPZ-CORE Usable Attached Objects
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_usable_attached_objects
+    ref: main
+    subpath: tpz_usable_attached_objects
+    dest: ./resources/[tpz-plugins]/tpz_usable_attached_objects
 
   # Download TPZ-CORE Medics
   - action: download_github
