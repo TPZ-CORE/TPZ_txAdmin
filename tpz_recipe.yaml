@@ -131,6 +131,13 @@ tasks:
     subpath: tpz_passports
     dest: ./resources/[tpz-utilities]/tpz_passports
     
+# Download TPZ-CORE Canoe
+  - action: download_github
+    src: https://github.com/TPZ-CORE/tpz_canoe
+    ref: main
+    subpath: tpz_canoe
+    dest: ./resources/[tpz-utilities]/tpz_canoe
+    
   # Download TPZ-CORE 3DME
   - action: download_github
     src: https://github.com/TPZ-CORE/tpz_3dme
