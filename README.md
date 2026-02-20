@@ -2,7 +2,9 @@
 
 The following recipe is for installing our Framework automatically through TxAdmin.
 
-We provide you more than 40+ unique scripts for this framework and only! Enjoy!
+We provide you more than 40+ unique scripts for this framework and only. Enjoy and give us your feedback to improve even more! Our scripts have been made carefully for the best performance of your server in order to be used and be able to handle huge playerbase servers without issues.
+
+
 # TxAdmin Installation
 
 ## Windows
