@@ -129,7 +129,7 @@ tasks:
     src: https://github.com/TPZ-CORE/tpz_passports
     ref: main
     subpath: tpz_passports
-    dest: ./resources/[tpz-utilities]/tpz_passports
+    dest: ./resources/[tpz-plugins]/tpz_passports
     
 # Download TPZ-CORE Canoe
   - action: download_github
