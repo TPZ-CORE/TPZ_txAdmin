@@ -179,6 +179,7 @@ CREATE TABLE IF NOT EXISTS `passports` (
   `steamname` varchar(50) NOT NULL,
   `firstname` varchar(50) NOT NULL,
   `lastname` varchar(50) NOT NULL,
+  `sex` int(1) NOT NULL DEFAULT 0,
   `dob` varchar(50) NOT NULL,
   `registration_date` varchar(50) NOT NULL,
   `expiration_date` int(11) NOT NULL DEFAULT 0,
