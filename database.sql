@@ -19,7 +19,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
   `staminaInner` int(4) DEFAULT 100,
   `coords` longtext DEFAULT NULL,
   `isdead` int(1) DEFAULT 0,
-  `default_weapon` varchar(50) DEFAULT '0',
+  `default_weapons` longtext DEFAULT '[]',
   `hours` float NOT NULL DEFAULT 0,
   `meta` longtext NOT NULL DEFAULT '[]',
   `inventory` longtext DEFAULT '[]',
