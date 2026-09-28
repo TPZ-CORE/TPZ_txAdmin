@@ -32,7 +32,7 @@ CREATE TABLE IF NOT EXISTS `characters` (
 	`selected_wagon_index` INT(11) DEFAULT 0,
   `selected_horse_index` INT(11) DEFAULT 0,
   `played_time` int(11) DEFAULT 0,
-  `last_play` varchar(50) DEFAULT NULL,
+  `last_play` int(11) DEFAULT 0,
   PRIMARY KEY (`charidentifier`),
   UNIQUE KEY `charidentifier` (`charidentifier`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin ROW_FORMAT=DYNAMIC;
